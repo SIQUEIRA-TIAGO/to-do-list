@@ -4,14 +4,8 @@ import doneIcon from "../../imgs/green-checkmark-line-icon.png"
 import deleteIcon from "../../imgs/red-x-line-icon.png"
 
 const Item = (props) => {
-  const [classMark, setClass] = useState('item pending');
-
   const doneIt = () => {
-    if(classMark === 'item'){
-      setClass('item done')
-    }else {
-      setClass('item')
-    }
+    props.doneItem(props.index)
   }
 
   const deleteIt = () => {
@@ -19,7 +13,7 @@ const Item = (props) => {
   }
 
   return (
-    <div className={classMark}>
+    <div className={props.classMark}>
       <p className="li">
         {props.text}
       </p>

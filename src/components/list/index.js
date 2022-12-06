@@ -13,6 +13,10 @@ const ToDoList = () => {
     list.splice(index, 1)
     setList([...list])
   }
+  const doneItem = (index) => {
+    list[index].classMark = "item done"
+    setList([...list])
+  }
   const clearList = () => {
     setList([])
   }
@@ -31,6 +35,8 @@ const ToDoList = () => {
           text={item.name}
           index={list.indexOf(item)}
           deleteItem={deleteItem}
+          doneItem={doneItem}
+          classMark={item.classMark}
           />
         ))}
         <button onClick={clearList} className="clearButton" >Clear Items</button>

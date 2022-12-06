@@ -10,7 +10,7 @@ const FormItem = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.addItem({name: name})
+    props.addItem({name: name, classMark: 'item'})
     setName('')
   }
 
