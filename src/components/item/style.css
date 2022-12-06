@@ -1,0 +1,36 @@
+img{
+  width: 25px;
+}
+.itemBtn{
+  border: transparent;
+  background-color: transparent;
+}
+
+.item{
+  border: transparent solid 2px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 550px;
+  padding: 15px;
+  margin-top: 7px;
+  border-radius: 3px;
+  background-color: #efefef;
+}
+
+.li{
+  padding-right: 10px;
+  word-wrap: break-word;
+  grid-column: 1/5;
+}
+
+.btnArea{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.done{
+  border: #6bbe66 solid 2px;
+  color: #6bbe66;
+}

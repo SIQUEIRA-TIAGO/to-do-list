@@ -1,0 +1,37 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+header{
+  background-color: #efefef;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  width: 100vw;
+}
+h3{
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  padding: 15px 0px;
+  margin: auto;
+}
+.clearButton{
+  margin-top: 15px;
+  color: #6bbe66;
+  border: 1px solid #6bbe66;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: transparent;
+}
+.clearButton:hover{
+  cursor: pointer;
+  background-color: #6bbe66;
+  color: #fff;
+}
+.itemsList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
