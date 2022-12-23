@@ -9,14 +9,11 @@ const ToDoList = () => {
   const addItem = (item) => {
     setList([...list, item])
   }
-  const deleteItem = (index) => {
-    list.splice(index, 1)
-    setList([...list])
+
+  const removeItem = index => {
+    setList(list.filter((_, idx) => index !== idx))
   }
-  const doneItem = (index) => {
-    list[index].classMark = "item done"
-    setList([...list])
-  }
+
   const clearList = () => {
     setList([])
   }
@@ -30,17 +27,19 @@ const ToDoList = () => {
         />
       </header>
       <div className="itemsList">
-        {list.map((item)=>(
+        {list.map((item, i)=>(
           <Item
-          text={item.name}
-          index={list.indexOf(item)}
-          deleteItem={deleteItem}
-          doneItem={doneItem}
-          classMark={item.classMark}
+            key={ item.id }
+            text={item.name}
+            removeItem={removeItem}
+            data-index={ i }
           />
         ))}
         <button onClick={clearList} className="clearButton" >Clear Items</button>
       </div>
+      {/* <button onClick={ evt => removeItem(1) }>
+        Remove
+      </button> */}
     </Fragment>
   )
 }

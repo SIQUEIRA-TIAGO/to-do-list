@@ -10,7 +10,7 @@ const FormItem = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.addItem({name: name, classMark: 'item'})
+    props.addItem({ name: name, id: `${Date.now()}-${parseInt(Math.random()*1000)}` })
     setName('')
   }
 
