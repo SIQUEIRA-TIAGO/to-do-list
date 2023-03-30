@@ -37,9 +37,9 @@ const ToDoList = () => {
         ))}
         <button onClick={clearList} className="clearButton" >Clear Items</button>
       </div>
-      {/* <button onClick={ evt => removeItem(1) }>
-        Remove
-      </button> */}
+      <footer>
+        <p className="developer">Developed by <strong>Tiago Siqueira de Oliveira</strong></p>
+      </footer>
     </Fragment>
   )
 }
