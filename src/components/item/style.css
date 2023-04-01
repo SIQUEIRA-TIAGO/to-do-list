@@ -34,3 +34,11 @@ img{
   border: #6bbe66 solid 2px;
   color: #6bbe66;
 }
+
+@media (max-width: 600px) {
+
+  .item{
+    width: 80%;
+    font-size: 12px;
+  }
+  }

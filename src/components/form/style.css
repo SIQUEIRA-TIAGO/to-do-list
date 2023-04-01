@@ -1,8 +1,3 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 form{
   width: 500px;
   margin: auto;
@@ -34,4 +29,12 @@ input{
   cursor: pointer;
   background-color: #6bbe66;
   color: #fff;
+}
+
+@media (max-width: 600px) {
+
+form{
+  width: auto;
+  margin: auto 15px;
+}
 }
