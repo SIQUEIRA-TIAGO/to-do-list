@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./style.css"
 import doneIcon from "../../imgs/green-checkmark-line-icon.png"
 import deleteIcon from "../../imgs/red-x-line-icon.png"
