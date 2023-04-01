@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import FormItem from "../form";
 import Item from "../item";
 import "./style.css"
@@ -6,16 +6,28 @@ import "./style.css"
 const ToDoList = () => {
   const [list, setList] = useState([])
 
+  useEffect(() => {
+    const previousList = JSON.parse(localStorage.getItem('list'));
+    if(previousList){
+      setList(previousList)
+    }
+  }, [])
+
   const addItem = (item) => {
-    setList([...list, item])
+    const updatedList = [...list, item];
+    setList(updatedList);
+    localStorage.setItem('list', JSON.stringify(updatedList));
   }
 
   const removeItem = index => {
-    setList(list.filter((_, idx) => index !== idx))
+    const updatedList = list.filter((_, idx) => index !== idx);
+    setList(updatedList);
+    localStorage.setItem('list', JSON.stringify(updatedList));
   }
 
   const clearList = () => {
     setList([])
+    localStorage.removeItem('list')
   }
 
   return (
